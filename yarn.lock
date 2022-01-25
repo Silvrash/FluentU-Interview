@@ -5901,10 +5901,9 @@ react-native-svg@^12.1.1:
     css-select "^2.1.0"
     css-tree "^1.0.0-alpha.39"
 
-react-native-video@^5.2.0:
+"react-native-video@https://github.com/MatrixFrog/react-native-video#11ca8a6799f932a5f24da85dfe68c696ad13a753":
   version "5.2.0"
-  resolved "https://registry.yarnpkg.com/react-native-video/-/react-native-video-5.2.0.tgz#c3f2c541775f4fda7e0d26d75a6fb59819b13d5e"
-  integrity sha512-5SK1lxyzrCkZF+WuxUxLR1Pt65E0rsWB1w1GrGxSLdC9zWYBumcmuHl+wPJ7UQvznjaH2Ze7uU1R3arejI7+WQ==
+  resolved "https://github.com/MatrixFrog/react-native-video#11ca8a6799f932a5f24da85dfe68c696ad13a753"
   dependencies:
     keymirror "^0.1.1"
     prop-types "^15.7.2"

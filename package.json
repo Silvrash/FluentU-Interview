@@ -15,7 +15,7 @@
     "react-native": "0.66.4",
     "react-native-pager-view": "^5.4.9",
     "react-native-svg": "^12.1.1",
-    "react-native-video": "^5.2.0",
+    "react-native-video": "https://github.com/MatrixFrog/react-native-video#11ca8a6799f932a5f24da85dfe68c696ad13a753",
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
