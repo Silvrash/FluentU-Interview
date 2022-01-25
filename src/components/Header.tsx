@@ -1,15 +1,19 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, ViewStyle } from 'react-native';
+import { SafeAreaView, StyleSheet, TouchableOpacity, ViewStyle } from 'react-native';
 import CloseIcon from '../assets/close.svg';
 import MoreIcon from '../assets/more-horizontal.svg';
 import Indicator from './Indicator';
 
-interface HeaderProps {}
+interface HeaderProps {
+	onReset: () => void;
+}
 
-const Header: React.FC<HeaderProps> = ({}) => {
+const Header: React.FC<HeaderProps> = ({ onReset }) => {
 	return (
 		<SafeAreaView style={styles.root}>
-			<CloseIcon />
+			<TouchableOpacity onPress={onReset}>
+				<CloseIcon />
+			</TouchableOpacity>
 			<Indicator />
 			<MoreIcon />
 		</SafeAreaView>

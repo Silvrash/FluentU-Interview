@@ -65,8 +65,10 @@ const useWorkspace = () => {
 			console.log('onSpeechResults: ', e);
 			const text = e.value.join(' ');
 			setTimeout(() => {
-				if (text.toLowerCase() === dialogue?.spanish.toLowerCase())
+				if (text.toLowerCase() === dialogue?.spanish.toLowerCase()) {
 					updateState({ isCorrect: true });
+					Voice.destroy().then(Voice.removeAllListeners);
+				}
 			}, 300);
 			updateState({ userText: text });
 		}
@@ -84,9 +86,7 @@ const useWorkspace = () => {
 			updateState({ action: Actions.done });
 		}
 
-		function onSpeechVolumeChanged(e: SpeechVolumeChangeEvent) {
-			console.log('onSpeechVolumeChanged: ', e);
-		}
+		function onSpeechVolumeChanged(e: SpeechVolumeChangeEvent) {}
 
 		Voice.onSpeechStart = onSpeechStart;
 		Voice.onSpeechEnd = onSpeechEnd;
@@ -149,6 +149,11 @@ const useWorkspace = () => {
 		player.current?.seek(0);
 	}
 
+	function reset() {
+		updateState(initialState);
+		player.current?.seek(0);
+	}
+
 	return {
 		...videoTimestamps,
 		userText,
@@ -167,6 +172,7 @@ const useWorkspace = () => {
 		startRecognizing,
 		stopRecognizing,
 		onContinue,
+		reset,
 	};
 };
 

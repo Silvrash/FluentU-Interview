@@ -35,7 +35,7 @@ const Workspace = () => {
 				resizeMode="cover"
 			/>
 
-			<Header />
+			<Header  onReset={state.reset}/>
 
 			<SpeechIntro
 				renderIf={state.showIntro}
